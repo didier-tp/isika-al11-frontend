@@ -19,7 +19,7 @@ var initMongooseWithSchemaAndModel = function(callbackWithPersistentModel) {
         change : Number
       });
       deviseSchema.set('id',false); //no default virtual id alias for _id
-      deviseSchema.set('toJSON', { virtuals: false , 
+      deviseSchema.set('toJSON', { virtuals: true , 
                                    versionKey:false,
                                    transform: function (doc, ret) {   delete ret._id  }
                                  });
