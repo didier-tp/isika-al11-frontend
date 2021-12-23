@@ -11,3 +11,10 @@ if(c==="25")
     console.log("c vaut 25 et est de type string");
  else 
    console.log("c ne vaut pas 25 ou bien n'est pas de type string");
+
+//var f1 = function(a,b){
+var f1 = (a,b)=>{
+	return a+b;
+}
+var res=f1(3,5);
+console.log("res="+res);
