@@ -2,15 +2,18 @@
 media-min or respond-below or media-breakpoint-down
 , media-max or respond-above ,  media-between or respond-between */
 @import "common.css";
-h2, h3 {
-  color: red;
-}
-h2:hover, h3:hover {
-  color: #b30000;
+
+$couleurPref : red;
+
+h2 {
+   color : $couleurPref;
+   &:hover{
+     color: darken($couleurPref,15%)
+   }
 }
 
 h3 {
-  text-decoration: underline;
+  @extend h2; text-decoration: underline;
 }
 
 /*
@@ -39,9 +42,10 @@ h3 {
   }
 }
 */
+
 .enEvidence {
   font-weight: bold;
-  color: red !important;
+  color: $couleurPref !important;
 }
 
 p {
@@ -228,7 +232,6 @@ img {
   height: 200px;
 }
 
-/*# sourceMappingURL=styles.css.map */
 /*# sourceMappingURL=styles.css.map */
 
 /*# sourceMappingURL=styles.css.map */
