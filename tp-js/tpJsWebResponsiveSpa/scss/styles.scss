@@ -197,6 +197,28 @@ img {
   animation: flash-anim 3s;
 }
 
+@keyframes secouer-anim {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.secouer:hover{
+  animation: secouer-anim 3s;
+}
+
 @keyframes rotation-anim {
   0% {
     transform: rotateY(95deg);
