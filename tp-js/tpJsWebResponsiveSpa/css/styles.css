@@ -11,6 +11,7 @@ h2:hover, h3:hover {
 
 h3 {
   text-decoration: underline;
+  border: 2px solid red;
 }
 
 /*

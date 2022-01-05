@@ -5,6 +5,10 @@ media-min or respond-below or media-breakpoint-down
 
 $couleurPref : red;
 
+@mixin with-border($color,$epaisseur){
+  border: $epaisseur solid $color ;
+}
+
 h2 {
    color : $couleurPref;
    &:hover{
@@ -13,8 +17,10 @@ h2 {
 }
 
 h3 {
-  @extend h2; text-decoration: underline;
-}
+  @extend h2; 
+  text-decoration: underline;
+  @include with-border(red,2px);
+} 
 
 /*
 @media screen and (max-width: 575px) {
