@@ -1,5 +1,5 @@
 import chai from 'chai'; 
-import { User , Account , MyAsyncSequence } from '../seqAsync-promise';
+import {  Account , MyAsyncSequence, User } from '../seqAsync-promise';
 var expect = chai.expect;
 
 describe("MyAsyncSequence tests", function () {
@@ -17,7 +17,7 @@ describe("MyAsyncSequence tests", function () {
     
     it("user with .userId==6 when calling getUserByIdAfterDelay(6,500)", async function () {
         try{
-            const user = await MyAsyncSequence.getUserByIdAfterDelay(6,500);
+            const user  = await MyAsyncSequence.getUserByIdAfterDelay(6,500);
             expect(user.userId).to.equals(6);
         }catch( err)  { 
             expect.fail(<string>err); 
