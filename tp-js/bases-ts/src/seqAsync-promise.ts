@@ -51,13 +51,21 @@ export class MyAsyncSequence{
 
     static retreive_account_and_owner(accountNumber : number) : void{
        let delay=3000; //ms
+       let compte : Account | null = null;
         //avec enchainement de "Promise":
         MyAsyncSequence.getAccountByNumAfterDelay(accountNumber,delay)
-        .then( (account)=>{ console.log("account:" + JSON.stringify(account));
+        .then( (account)=>{  compte = account;
+                             this.afficherCompteRecupere(compte);
+                             // console.log("account:" + JSON.stringify(account));
                              return MyAsyncSequence.getUserByIdAfterDelay(account.ownerId,delay);},
                              (err)=>{console.log("aff err account:" + err);})
         .then( (user)=> { console.log("user (owner of account):" + JSON.stringify(user));  })
         .catch((err)=>{console.log("aff commun:" + err);});
+
+    }
+
+    static afficherCompteRecupere(compte:Account){
+      console.log("compte:" + JSON.stringify(compte));
     }
 
 }
