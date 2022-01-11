@@ -2,13 +2,14 @@
 <div class="row">
     <div class="col-sm-6">
         <p>liste des produits existants:</p>
-        <table border="1">
+        <table border=1>
         <thead>
             <tr><th>ref</th><th>label</th><th>prix</th></tr>
         </thead>
         <tbody>
             <tr *ngFor="let p of produits"
-                (click)="onSelectionnerProduit(p)">
+                (click)="onSelectionnerProduit(p)"
+                [class.selected]="p===produit">
                 <td>{{p.ref}}</td><td>{{p.label}}</td><td>{{p.prix}}</td>
             </tr>
         </tbody> 

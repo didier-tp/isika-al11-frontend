@@ -11,20 +11,23 @@ export class ProduitComponent implements OnInit {
   produit : Produit = new Produit(); //produit sélectionné (à modifier ou à supprimer ou ....)
   
   onSelectionnerProduit(p:Produit){
-     this.produit = p; //variante simpliste (idéalement clonage)
+     this.produit = p; //variante simpliste (idéalement)
   }
 
   onSupprimerSelection(){
-    for(let i in this.produits){
-        if(this.produit.ref == this.produits[i].ref){
-          delete this.produits[i]; break;
-        }
-    }
+      for(let i in this.produits){
+          if(this.produit.ref == this.produits[i].ref){
+            this.produits.splice(<number><unknown>i,1); break;
+          }
+      }
+    this.produit = new Produit();
  }
 
  onAjouterNew(){
-   this.produit = new Produit();
-   this.produits.push(this.produit);
+   if(this.produit.ref != "?" || this.produits.length == 0){
+        this.produit = new Produit();
+        this.produits.push(this.produit);
+   }
  }
   
   produits : Produit[] = [
