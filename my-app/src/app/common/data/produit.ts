@@ -1,7 +1,7 @@
 export class Produit{
     constructor(
-       ref : string = "" ,
-       label : string ="?",
-       prix : number = 0
+       public ref : string = "" ,
+       public label : string ="?",
+       public prix : number = 0
     ){}
 }

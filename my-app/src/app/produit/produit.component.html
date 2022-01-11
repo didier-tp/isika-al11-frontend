@@ -1,8 +1,15 @@
 <h3> gestion des produits</h3>
 
 liste des produits existants:
-<table>
-    
+<table boder="1">
+   <thead>
+       <tr><th>ref</th><th>label</th><th>prix</th></tr>
+   </thead>
+   <tbody>
+    <tr *ngFor="let p of produits">
+        <td>{{p.ref}}</td><td>{{p.label}}</td><td>{{p.prix}}</td>
+    </tr>
+   </tbody> 
 </table>
 
 <!-- + New/Add , Update , Delete -->
