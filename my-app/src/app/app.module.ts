@@ -15,6 +15,7 @@ import { RegletteComponent } from './basic/reglette/reglette.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BsUtilModule } from 'src/bs-util/bs-util.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ imports: [
   AppRoutingModule,
   FormsModule,
   BrowserAnimationsModule,
-  TabsModule.forRoot()
+  TabsModule.forRoot(),
+  BsUtilModule
 ],
   providers: [],
   bootstrap: [AppComponent]
