@@ -7,7 +7,8 @@
             <tr><th>ref</th><th>label</th><th>prix</th></tr>
         </thead>
         <tbody>
-            <tr *ngFor="let p of produits">
+            <tr *ngFor="let p of produits"
+                (click)="onSelectionnerProduit(p)">
                 <td>{{p.ref}}</td><td>{{p.label}}</td><td>{{p.prix}}</td>
             </tr>
         </tbody> 
@@ -19,7 +20,7 @@
             <label>ref:</label><input name="ref" [(ngModel)]="produit.ref"/> <br/>
             <label>label:</label><input name="label" [(ngModel)]="produit.label"/> <br/>
             <label>prix:</label><input name="prix" [(ngModel)]="produit.prix"/> <br/>
-            <button>Modifier</button> &nbsp;<button>Supprimer</button> ...
+            <button (click)="onAjouterNew()">Ajouter</button> &nbsp;<button (click)="onSupprimerSelection()">Supprimer</button> ...
         </form>
     </div>
 </div>
