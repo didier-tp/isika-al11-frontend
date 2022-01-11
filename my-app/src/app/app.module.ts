@@ -16,6 +16,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BsUtilModule } from 'src/bs-util/bs-util.module';
+import { ProduitComponent } from './produit/produit.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BsUtilModule } from 'src/bs-util/bs-util.module';
   ZzComponent,
   LoginComponent,
   WelcomeComponent,
-  RegletteComponent
+  RegletteComponent,
+  ProduitComponent
 ],
 imports: [
   BrowserModule,
