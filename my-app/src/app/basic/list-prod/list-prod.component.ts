@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Produit, ProduitService } from 'src/app/common/service/produit.service';
+import { ProduitV2, ProduitService } from 'src/app/common/service/produit.service';
 
 @Component({
   selector: 'app-list-prod',
@@ -8,7 +8,7 @@ import { Produit, ProduitService } from 'src/app/common/service/produit.service'
 })
 export class ListProdComponent implements OnInit {
 
-  listeProduits : Produit[]= [];
+  listeProduits : ProduitV2[]= [];
 
   constructor(private _produitService : ProduitService) { 
     //injection de dépendance par constructeur
@@ -20,7 +20,7 @@ export class ListProdComponent implements OnInit {
 
   actualiserListeProduitSelonSeuilMaxi(seuilMaxi : number){
     this._produitService.rechercherProduitSimu$(seuilMaxi)
-        .subscribe((listP : Produit[])=> { this.listeProduits = listP})
+        .subscribe((listP : ProduitV2[])=> { this.listeProduits = listP})
   
   }      
 
