@@ -189,21 +189,17 @@ img {
 }
 
 @keyframes secouer-anim {
-  0% {
-    transform: rotate(10deg);
-  }
-  25% {
-    transform: rotate(-10deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  75% {
-    transform: rotate(-10deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+  0% { transform: rotate(10deg);  }
+  10% { transform: rotate(-10deg);  }
+  20% { transform: rotate(10deg);  }
+  30% { transform: rotate(-10deg);  }
+  40% { transform: rotate(10deg);  }
+  50% { transform: rotate(-10deg);  }
+  60% { transform: rotate(10deg);  }
+  70% { transform: rotate(-10deg);  }
+  80% { transform: rotate(10deg);  }
+  90% { transform: rotate(-10deg);  }
+  100% { transform: rotate(0deg);  }
 }
 .secouer:hover {
   animation: secouer-anim 3s;

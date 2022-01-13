@@ -17,6 +17,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BsUtilModule } from 'src/bs-util/bs-util.module';
 import { ProduitComponent } from './produit/produit.component';
+import { ConversionComponent } from './conversion/conversion.component';
+import { AdminDeviseComponent } from './admin-devise/admin-devise.component';
+import { SeuilComponent } from './basic/seuil/seuil.component';
+import { ListProdComponent } from './basic/list-prod/list-prod.component';
+import { MynumberPipe } from './pipe/mynumber.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +37,12 @@ import { ProduitComponent } from './produit/produit.component';
   LoginComponent,
   WelcomeComponent,
   RegletteComponent,
-  ProduitComponent
+  ProduitComponent,
+  ConversionComponent,
+  AdminDeviseComponent,
+  SeuilComponent,
+  ListProdComponent,
+  MynumberPipe
 ],
 imports: [
   BrowserModule,
@@ -39,7 +50,8 @@ imports: [
   FormsModule,
   BrowserAnimationsModule,
   TabsModule.forRoot(),
-  BsUtilModule
+  BsUtilModule,
+  HttpClientModule
 ],
   providers: [],
   bootstrap: [AppComponent]

@@ -16,10 +16,10 @@
    line-height : 100% 
 }
 
-.acrostiche > p:first-letter {
+.acrostiche > p::first-letter {
 	font-family : playfair_displayregular, Arial ;
 	color : red;
-	font-size : 2em;
+	font-size : 2rem;
 }
 
 .withTheRootsFont{

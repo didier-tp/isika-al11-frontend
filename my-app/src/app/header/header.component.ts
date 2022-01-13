@@ -19,11 +19,14 @@ export class HeaderComponent implements OnInit {
         { label : "welcome" , path : "/ngr-welcome" } ,
         { divider : true },
         { label : "produit" , path : "/ngr-produit" },
-        { label : "conversion" , path : "/ngr-conversion" }
+        { label : "conversion" , path : "/ngr-conversion" },
+        { divider : true },
+        { label : "login" , path : "/ngr-login" },
+        { label : "admin-devise" , path : "/ngr-admin-devise" } ,
       ]
     },
     { label : "basic" , path : "/ngr-basic" } , 
-    { label : "login" , path : "/ngr-login" }
+    { label : "conversion" , path : "/ngr-conversion" } 
     ];
   
 
