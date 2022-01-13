@@ -22,7 +22,8 @@ import { AdminDeviseComponent } from './admin-devise/admin-devise.component';
 import { SeuilComponent } from './basic/seuil/seuil.component';
 import { ListProdComponent } from './basic/list-prod/list-prod.component';
 import { MynumberPipe } from './pipe/mynumber.pipe';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MyAuthInterceptor } from './interceptor/my-auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,13 @@ imports: [
   BsUtilModule,
   HttpClientModule
 ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MyAuthInterceptor,
+      multi: true
+      }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
