@@ -7,7 +7,8 @@
  <link rel="stylesheet" type="text/css" href="css/layout.css" />
  <link rel="stylesheet" type="text/css" href="css/styles.css" />
  <link rel="stylesheet" type="text/css" href="css/defilement.css" />
- <link rel="stylesheet" type="text/css" href="css/avec-transparence.css" />
+ <link rel="stylesheet" type="text/css" href="css/avec-transparence.css"/>
+ <link rel="stylesheet" type="text/css" href="css/selonPlace.css" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- for responsive bootstrap on mobile device -->
  <script src="lib/jquery-3.3.1.min.js"></script>
  <script src="lib/bootstrap.bundle.min.js"></script>
@@ -114,9 +115,21 @@ window.onload=function(){
 	</nav>
    </header>
    <main id="mainContent" class="mainContentUnderStickyHeader mainContentAboveStickyFooter">
-      <section class="container-fluid">
-	    <div id="idAlternativeSubPart">...</div>
-	  </section>
+      <div class="myFlexRowNowrap">
+		  <section class="flexItem">
+			<div id="idAlternativeSubPart">...</div>
+		  </section>
+		  <section class="siPlaceSuffisante">
+   		       <div class="maPublicite">
+				  texte<br/>
+				  ou<br/>
+				  image <br/>
+				  de <br/>
+				  pub<br/>
+				  ...<br/>
+				</div>
+		  </section>
+	  </div>
    </main>
    <footer class="stickyFooter">
 	  <h4>pied de page (liens, mentions légales)</h4>
